@@ -1,0 +1,9 @@
+th, td{
+    border-style: ridge;
+}
+
+input, button {
+    margin-top: 30px;
+    width: 20%
+}
+
