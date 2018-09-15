@@ -16,6 +16,7 @@ Based on your recommendation, your company is hiring several coding bootcamp gra
   <li>coding school</li>
   <li>programming language</li>
 
+<div>
 They also want you to build it in a way that anyone at the company can add a new developer through the UI without touching the code. They also want to make sure that any new developer that is added in this way is saved in the browser and not lost when you refresh or close the web page.
 
 Think about how you would create these student models, store them, iterate through all the models and then display the models to a web page. Also remember what you learned about local storage and persisting data.
@@ -23,3 +24,4 @@ Think about how you would create these student models, store them, iterate throu
 In addition, you will need to utilize an event listener on an input and/or form to allow anyone to add new developers to the list saving you the work of adding code in the future.
 
 Last but not least, give each property it's own class and style them with a different color for a visual queue as a way for the user to distinguish between the different properties.
+</div>
