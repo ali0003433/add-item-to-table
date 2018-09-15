@@ -29,23 +29,42 @@ let dev8 = new DevObject('Zach', 'Code Fellows', 'Javascript');
 //push new objects to devArray
 devArray.push(dev1, dev2, dev3, dev4, dev5, dev6, dev7, dev8);
 
-//create html element li for each new object
+//create html element for each new object
 let i;
-for(i = 0; i < devArray.length; i++){
-        let elTableRow = document.createElement('tr');
-        elTable.appendChild(elTableRow);
-        let newNameData= document.createElement('td');
-        elTableRow.appendChild(newNameData);
-        newNameData.setAttribute('class','name');
-        newNameData.innerHTML = devArray[i].name;
+function displayDevData(){
+    for(i = 0; i < devArray.length; i++){
+            let elTableRow = document.createElement('tr');
+            elTable.appendChild(elTableRow);
+            let newNameData= document.createElement('td');
+            elTableRow.appendChild(newNameData);
+            newNameData.setAttribute('class','name');
+            newNameData.innerHTML = devArray[i].name;
 
-        let newSchoolData = document.createElement('td');
-        elTableRow.appendChild(newSchoolData);
-        newSchoolData.setAttribute('class', 'school');
-        newSchoolData.innerHTML = devArray[i].school;
+            let newSchoolData = document.createElement('td');
+            elTableRow.appendChild(newSchoolData);
+            newSchoolData.setAttribute('class', 'school');
+            newSchoolData.innerHTML = devArray[i].school;
 
-        let newLanguageData = document.createElement('td');
-        elTableRow.appendChild(newLanguageData);
-        newLanguageData.setAttribute('class', 'language');
-        newLanguageData.innerHTML = devArray[i].language;
+            let newLanguageData = document.createElement('td');
+            elTableRow.appendChild(newLanguageData);
+            newLanguageData.setAttribute('class', 'language');
+            newLanguageData.innerHTML = devArray[i].language;
+    }
 }
+
+let newDevName = elForm.newDevName;
+let newDevSchool = elForm.newDevSchool;
+let newDevLanguage = elForm.newDevLanguage;
+
+function createNewDev(event) {
+    event.preventDefault();
+    elTable.innerHTML='';
+    let newDev = new DevObject(newDevName.value, newDevSchool.value, newDevLanguage.value);
+    devArray.push(newDev);
+    displayDevData();
+}
+
+
+elForm.addEventListener('submit', createNewDev);
+
+displayDevData();
