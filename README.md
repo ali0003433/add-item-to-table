@@ -15,6 +15,7 @@ Based on your recommendation, your company is hiring several coding bootcamp gra
   <li>Name</li>
   <li>coding school</li>
   <li>programming language</li>
+
 They also want you to build it in a way that anyone at the company can add a new developer through the UI without touching the code. They also want to make sure that any new developer that is added in this way is saved in the browser and not lost when you refresh or close the web page.
 
 Think about how you would create these student models, store them, iterate through all the models and then display the models to a web page. Also remember what you learned about local storage and persisting data.
