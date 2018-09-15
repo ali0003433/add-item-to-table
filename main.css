@@ -7,3 +7,12 @@ input, button {
     width: 20%
 }
 
+.name{
+    color: blue;
+}
+.school{
+    color: purple;
+}
+.language{
+    color: pink;
+}
